@@ -1,5 +1,5 @@
 ## Automation Test Mobile
-   
+  Projeto de automação AWS Device Farm
 
 
 ## Environment Configuration
@@ -74,4 +74,3 @@
     - cucumber
   **Por tag**
     - cucumber -t @tag
-

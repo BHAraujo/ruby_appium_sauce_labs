@@ -7,7 +7,6 @@ class CreateAccountPage < BasePage
     @driver = $driver
     @title_create_account = :xpath, "//android.widget.TextView[@text='Cadastrar']"
     @button_continue = :xpath, "//android.widget.Button[@text='CONTINUAR']"
-    @text_message_created = :id, "message"
     @button_ok_message_create = :xpath, "//android.widget.Button[@text='OK']"
   end
 
@@ -45,8 +44,8 @@ class CreateAccountPage < BasePage
   end
 
   def text_message_created_text
-    get_text(@text_message_created)
+    sleep 2
+    @driver.find_elements(:xpath, "//android.widget.TextView")[1].text
   end
-
 
 end

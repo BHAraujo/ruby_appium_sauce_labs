@@ -31,6 +31,5 @@ end
 
 Then("must show message") do |message|
   expect(create_account_page.text_message_created_text).to eql(message)
-  byebug
   create_account_page.button_ok_message_create_tap
 end
