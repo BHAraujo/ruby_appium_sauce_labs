@@ -1,0 +1,12 @@
+---
+default: -c -p bdd
+bdd: --format pretty
+html_report: --format progress --format html --out=reports/features_report.html
+allure_report: "--format pretty --format AllureCucumber::CucumberFormatter --out reports/allure-results"
+capabilities:
+  deviceName: Samsung Tablet
+  udid: 5200b25d4fb976cf
+  platformName: Android
+  platformVersion: 9.0
+  app: IngressoDotCom.apk
+  timeouts_wait: 10
