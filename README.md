@@ -1,5 +1,5 @@
 ## Automation Test Mobile
-  Projeto de automação AWS Device Farm
+  Projeto de automação utilizando Ruby e Appium e Sauce Labs
 
 
 ## Environment Configuration
