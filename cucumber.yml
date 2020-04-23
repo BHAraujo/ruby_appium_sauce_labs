@@ -21,4 +21,5 @@ capabilities_sauce_labs:
   app: "http://github.com/BHAraujo/ruby_automation_mobile/blob/master/features/support/binary/IngressoDotCom.apk?raw=true"
   timeouts_wait: 240
   sauce_username: 
-  sauce_access_key: 
+  sauce_access_key:
+  port: 443

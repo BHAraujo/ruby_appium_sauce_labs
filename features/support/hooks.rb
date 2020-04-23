@@ -1,6 +1,6 @@
 Before do
   $driver.start_driver
-  $driver.manage.timeouts.implicit_wait = CAPABILITIES["timeouts_wait"]
+  $driver.manage.timeouts.implicit_wait = $capabilities["timeouts_wait"]
 end
 
 After do |scenario|

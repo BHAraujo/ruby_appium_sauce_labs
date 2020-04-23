@@ -14,7 +14,6 @@ def desired_capabilities_local_host(deviceName, udid, platformName, platformVers
              fullReset: true,
              automationName: "uiautomator2",
              autoGrantPermissions: true,
-             # appWaitActivity: "br.com.ingresso.ui.activities.SplashActivity",
              autoAcceptAlerts: true,
              app: "#{PATH_BINARY}/#{app}",
              newCommandTimeout: 120000,
@@ -31,7 +30,7 @@ end
 
 
 def desired_capabilities_sauce_labs(deviceName, platformName, platformVersion,
-                                    app, sauce_username, sauce_access_key)
+                                    app, port, sauce_username, sauce_access_key)
 
   opts = {
          caps: {
@@ -52,7 +51,7 @@ def desired_capabilities_sauce_labs(deviceName, platformName, platformVersion,
              nativeInstrumentsLib: false
          },
          appium_lib: {
-             server_url: "https://#{sauce_username}:#{sauce_access_key}@ondemand.saucelabs.com:443/wd/hub"
+             server_url: "https://#{sauce_username}:#{sauce_access_key}@ondemand.saucelabs.com:#{port}/wd/hub"
          }
      }
 

@@ -14,28 +14,17 @@ require_relative "helpers.rb"
 World(HelperPages)
 
 CONFIG = YAML.load_file("cucumber.yml")
-CAPABILITIES = CONFIG["environment"]
 
 
-if CAPABILITIES.downcase == "localhost"
-  CAPABILITIES = CONFIG["capabilities_local_host"]
-  $driver = Appium::Driver.new(desired_capabilities_local_host(CAPABILITIES["deviceName"], CAPABILITIES["udid"],
-                                                               CAPABILITIES["platformName"], CAPABILITIES["platformVersion"],
-                                                               CAPABILITIES["app"]), true)
+if CONFIG["environment"].downcase == "localhost"
+  $capabilities = CONFIG["capabilities_local_host"]
+  $driver = Appium::Driver.new(desired_capabilities_local_host($capabilities["deviceName"], $capabilities["udid"],
+                                                               $capabilities["platformName"], $capabilities["platformVersion"],
+                                                               $capabilities["app"]), true)
 else
-  CAPABILITIES = CONFIG["capabilities_sauce_labs"]
-  $driver = Appium::Driver.new(desired_capabilities_sauce_labs(CAPABILITIES["deviceName"], CAPABILITIES["platformName"],
-                                                               CAPABILITIES["platformVersion"], CAPABILITIES["app"],
-                                                               CAPABILITIES["sauce_username"], CAPABILITIES["sauce_access_key"]),
+  $capabilities = CONFIG["capabilities_sauce_labs"]
+  $driver = Appium::Driver.new(desired_capabilities_sauce_labs($capabilities["deviceName"], $capabilities["platformName"],
+                                                               $capabilities["platformVersion"], $capabilities["app"], $capabilities["port"],
+                                                               $capabilities["sauce_username"], $capabilities["sauce_access_key"]),
                                                                true)
 end
-
-
-
-
-
-# Allure.configure do |c|
-#   c.results_directory = "/reports"
-#   c.clean_results_directory = true
-#   c.logging_level = Logger::INFO
-# end

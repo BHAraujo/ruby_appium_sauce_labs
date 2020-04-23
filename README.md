@@ -31,7 +31,7 @@
       - adb???
 
 
-## Configuration Project
+## Configuration Project to execute LOCAL HOST
 
 ## Created environment variable
         **Include variable in ~/.bash_profile** <br>
@@ -50,14 +50,13 @@
                     - Command Line: adb devices
                         List of devices attached
                           0049195854	device
-                  "automationName": "uiautomator2"
                   "deviceName": "Define name for device"
                   "app": "Name apk or ipa, located in folder service > binary"
                   "timeouts_wait": "Tempo de espera para o elemento ficar visivel na tela"
 
 ## Install Dependency
          **Command Line:** <br>
-            - gem install bundle
+            - gem install bundler
             - bundle install
 
           **Create Emulator**
@@ -69,8 +68,27 @@
              - Next
              - Finish
 
+
+## Configuration Project to execute SAUCE LABS
+    - Create aaccount free trial in Sauce Labs,
+       - https://saucelabs.com/sign-up
+
+    - Get sauce_username and  sauce_access_key
+       - After login click in Account > User  Settings
+       - In categoria Driver Creation copy driver available just sauce_username, sauce_access_key and port   
+       - And in file cucumber.yml past sauce_username, sauce_access_key and port
+            Obs: deviceName: If account is free trial just available for test  
+
+            **deviceName: "Android GoogleAPI Emulator"
+             platformName: "Android"
+             platformVersion: "9.0"**
+
+    - Can you see live execution in AUTOMATED > Test Results          
+
+
 ## Run project
   **Todos os cenários**
     - cucumber
+
   **Por tag**
     - cucumber -t @tag
