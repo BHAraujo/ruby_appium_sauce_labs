@@ -18,7 +18,7 @@ capabilities_sauce_labs:
   deviceName: "Android GoogleAPI Emulator"
   platformName: "Android"
   platformVersion: "9.0"
-  app: "http://github.com/BHAraujo/ruby_automation_mobile/blob/master/features/support/binary/IngressoDotCom.apk?raw=true"
+  app: "sauce-storage:IngressoDotCom.zip"
   timeouts_wait: 240
   sauce_username: 
   sauce_access_key:

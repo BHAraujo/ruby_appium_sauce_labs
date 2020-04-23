@@ -83,7 +83,8 @@
              platformName: "Android"
              platformVersion: "9.0"**
 
-    - Can you see live execution in AUTOMATED > Test Results          
+    - Can you see live execution in AUTOMATED > Test Results
+    - Send APK to sauce storage execute automation test https://wiki.saucelabs.com/display/DOCS/Temporary+Storage+Methods          
 
 
 ## Run project
