@@ -25,5 +25,8 @@ end
 
 And("agree terms of use") do
   base_page.scrool_down
+  if CONFIG["environment"] == "sauce_labs"
+    base_page.scrool_down
+  end
   create_account_page.agree_terms_tap
 end

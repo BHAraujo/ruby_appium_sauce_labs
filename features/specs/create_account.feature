@@ -1,7 +1,7 @@
 #language: en
 
    Feature: Validate create account Ingressos.com
-      As an user would like create account and do log in
+      As an user would like create account
 
 
     Scenario: Create account

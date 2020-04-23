@@ -41,6 +41,6 @@ class BasePage
 
   def scrool_down
     wait = Selenium::WebDriver::Wait.new
-    wait.until{ Appium::TouchAction.new.swipe(:start_x => 100, :start_y => 1100, :end_x =>100, :end_y =>100, :duration => 1000).perform }
+    wait.until{ Appium::TouchAction.new.swipe(:start_x => 200, :start_y => 1100, :end_x =>200, :end_y =>100, :duration => 1000).perform }
   end
 end

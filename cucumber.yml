@@ -3,10 +3,22 @@ default: -c -p bdd
 bdd: --format pretty
 html_report: --format progress --format html --out=reports/features_report.html
 allure_report: "--format pretty --format AllureCucumber::CucumberFormatter --out reports/allure-results"
-capabilities:
+#localhost or sauce_labs
+environment: sauce_labs
+
+capabilities_local_host:
   deviceName: Samsung Tablet
   udid: 5200b25d4fb976cf
   platformName: Android
   platformVersion: 9.0
   app: IngressoDotCom.apk
-  timeouts_wait: 10
+  timeouts_wait: 120
+
+capabilities_sauce_labs:
+  deviceName: "Android GoogleAPI Emulator"
+  platformName: "Android"
+  platformVersion: "9.0"
+  app: "http://github.com/BHAraujo/ruby_automation_mobile/blob/master/features/support/binary/IngressoDotCom.apk?raw=true"
+  timeouts_wait: 240
+  sauce_username: 
+  sauce_access_key: 
